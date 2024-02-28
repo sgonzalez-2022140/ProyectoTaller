@@ -21,6 +21,6 @@ api.post('/login', login)
 //Rutas privadas
 api.get('/test', [validateJwt, isAdmin])
 api.put('/updateUser/:id', [validateJwt, isAdmin], updateUser) //El validate es para validar con token
-api.delete('/deleteUser/:id', deleteUser)
+api.delete('/deleteUser/:id', [validateJwt], deleteUser)
 
 export default api
