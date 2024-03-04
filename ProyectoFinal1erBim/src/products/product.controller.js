@@ -98,11 +98,20 @@ export const updateProduct = async(req, res)=>{
     try{
         //necesitamos todo el valor a actualizar
         let data = req.body
+        //Este es el nuevo stock
         //Lo haremos por id
         let { id } = req.params
+        //iniciarlizar productos 
+        
+        let {stock} = await Product.findOne({_id: id})
+        console.log(stock)
+        console.log()
+        console.log(data.stock);
         //validar 
         let update = checkUpdateProduct(data, false)
         if (!update) return res.status(400).send({ message: 'Have submitted some data that cannot be updated or missing data' })
+        //crear validación para que cuando el admin agregue se sume con el stock original       
+        data.stock = parseInt(stock) + parseInt(data.stock)
         //Actualizar
         let updateProduct = await Product.findOneAndUpdate(
             {_id: id},
@@ -110,7 +119,7 @@ export const updateProduct = async(req, res)=>{
             {new: true}
         )
         //validar la actualización
-        if(!updateProduct) return res.status(404).send({message: 'Product not found and not updated'})
+       if(!updateProduct) return res.status(404).send({message: 'Product not found and not updated'})
         //Responder si se pudo hacer
         return res.send({message: 'Product updated successfully', updateProduct})
 
