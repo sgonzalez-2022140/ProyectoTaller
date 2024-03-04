@@ -6,6 +6,8 @@ import {
     deleteProducts, search, viewProductbyCategory
 } from './product.controller.js'
 
+import { validateJwt, isAdmin, isClient } from '../middlewares/validate-jwt.js'
+
 const api = Router()
 
 //GET
@@ -23,7 +25,6 @@ api.get('/viewProductbyCategory/:id', viewProductbyCategory)
 api.post('/search', search)
 //Agregar productos
 api.post('/addProduct', addProduct)
-
 
 
 //actualizar producto
