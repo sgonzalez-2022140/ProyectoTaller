@@ -1,0 +1,574 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "ProyectoFinal 2022140",
+    "dateExported": "2024-03-04T17:46:58.926Z",
+    "version": "1.1",
+    "folders": [
+        {
+            "_id": "dcef8abb-dcec-4f31-ba64-c587fcfdd6c4",
+            "name": "CLIENT",
+            "containerId": "",
+            "created": "2024-02-29T15:02:38.644Z",
+            "sortNum": 10000
+        },
+        {
+            "_id": "9ad9f7b5-0fef-46d2-8cb2-3d1ca71bbd88",
+            "name": "Post",
+            "containerId": "dcef8abb-dcec-4f31-ba64-c587fcfdd6c4",
+            "created": "2024-02-29T15:02:38.645Z",
+            "sortNum": 20000
+        },
+        {
+            "_id": "6faaac19-36e4-43bb-8f61-4ac7da6c4042",
+            "name": "Get",
+            "containerId": "dcef8abb-dcec-4f31-ba64-c587fcfdd6c4",
+            "created": "2024-02-29T15:02:38.646Z",
+            "sortNum": 30000
+        },
+        {
+            "_id": "7734497a-3cd8-4624-b8d4-7438e26c239e",
+            "name": "ADMIN",
+            "containerId": "",
+            "created": "2024-02-29T15:02:38.647Z",
+            "sortNum": 50000
+        },
+        {
+            "_id": "16bee4f0-0dcc-4e88-b940-d23d31cfb61e",
+            "name": "POST",
+            "containerId": "7734497a-3cd8-4624-b8d4-7438e26c239e",
+            "created": "2024-02-29T15:02:38.648Z",
+            "sortNum": 60000
+        },
+        {
+            "_id": "62078375-e24c-4b71-9e7b-52fd0450e5c7",
+            "name": "GET",
+            "containerId": "7734497a-3cd8-4624-b8d4-7438e26c239e",
+            "created": "2024-02-29T15:02:38.649Z",
+            "sortNum": 70000
+        },
+        {
+            "_id": "6e3d03a9-9689-49eb-a41f-619322f6c384",
+            "name": "Delete / Update",
+            "containerId": "7734497a-3cd8-4624-b8d4-7438e26c239e",
+            "created": "2024-02-29T15:02:38.650Z",
+            "sortNum": 80000
+        },
+        {
+            "_id": "25beebcb-9bff-40ad-8e3a-bfaced668592",
+            "name": "Category",
+            "containerId": "6e3d03a9-9689-49eb-a41f-619322f6c384",
+            "created": "2024-02-29T15:02:38.651Z",
+            "sortNum": 90000
+        },
+        {
+            "_id": "e41ec7ff-a61d-4bf3-b1dc-43c3c63dce8a",
+            "name": "Product",
+            "containerId": "6e3d03a9-9689-49eb-a41f-619322f6c384",
+            "created": "2024-02-29T15:02:38.652Z",
+            "sortNum": 100000
+        },
+        {
+            "_id": "fa88a6a2-f5aa-4fd9-adb4-aa1ace082289",
+            "name": "User",
+            "containerId": "6e3d03a9-9689-49eb-a41f-619322f6c384",
+            "created": "2024-03-04T17:34:58.527Z",
+            "sortNum": 110000
+        }
+    ],
+    "requests": [
+        {
+            "_id": "c7546c97-8c13-466a-be7f-8fbe63628484",
+            "colId": "6246dca3-4605-417a-83e0-4b0952630054",
+            "containerId": "6faaac19-36e4-43bb-8f61-4ac7da6c4042",
+            "name": "See all Products",
+            "url": "/product/getAllProducts",
+            "method": "GET",
+            "sortNum": 10000,
+            "created": "2024-02-29T15:02:38.644Z",
+            "modified": "2024-02-29T15:02:38.644Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "f2106c34-2c07-410d-b66f-c4cd09d88419",
+            "colId": "6246dca3-4605-417a-83e0-4b0952630054",
+            "containerId": "9ad9f7b5-0fef-46d2-8cb2-3d1ca71bbd88",
+            "name": "Search",
+            "url": "/product/search",
+            "method": "POST",
+            "sortNum": 10000,
+            "created": "2024-02-29T15:02:38.645Z",
+            "modified": "2024-02-29T15:02:38.645Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "formencoded",
+                "raw": "",
+                "form": [
+                    {
+                        "name": "name",
+                        "value": "Escoba"
+                    }
+                ]
+            },
+            "tests": []
+        },
+        {
+            "_id": "b04d2c2d-090f-44cd-92ec-588dc562463a",
+            "colId": "6246dca3-4605-417a-83e0-4b0952630054",
+            "containerId": "16bee4f0-0dcc-4e88-b940-d23d31cfb61e",
+            "name": "Add a Product",
+            "url": "/product/addProduct",
+            "method": "POST",
+            "sortNum": 10000,
+            "created": "2024-02-29T15:02:38.647Z",
+            "modified": "2024-03-04T17:33:16.329Z",
+            "headers": [
+                {
+                    "name": "Authorization",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWU2MDMwNjFlNjkwZTk0MjNlNmU2OTkiLCJ1c2VybmFtZSI6ImFybWFzIiwibmFtZSI6IlBlZHJvIiwicm9sZSI6IkFETUlOIiwiaWF0IjoxNzA5NTczNDY4LCJleHAiOjE3MDk1ODQyNjh9.5mmtwSl3UYIYCm75cF04k4MpOWTmTUekv6os8oPgmM4",
+                    "isDisabled": true
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "formencoded",
+                "raw": "",
+                "form": [
+                    {
+                        "name": "name",
+                        "value": "Barra Z"
+                    },
+                    {
+                        "name": "description",
+                        "value": "Barra z para gym"
+                    },
+                    {
+                        "name": "stock",
+                        "value": "2"
+                    },
+                    {
+                        "name": "categories",
+                        "value": "65e09caa17abaa0bd92ea47d"
+                    }
+                ]
+            },
+            "tests": []
+        },
+        {
+            "_id": "46926246-008c-4753-a72e-b6ad2e28021c",
+            "colId": "6246dca3-4605-417a-83e0-4b0952630054",
+            "containerId": "62078375-e24c-4b71-9e7b-52fd0450e5c7",
+            "name": "Only 1 product by ID",
+            "url": "/product/getAProduct/65d6b70fc396a15df1801e29",
+            "method": "GET",
+            "sortNum": 10000,
+            "created": "2024-02-29T15:02:38.648Z",
+            "modified": "2024-02-29T15:02:38.648Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "5b19e9b0-271e-404f-8cf6-a0056af02d7b",
+            "colId": "6246dca3-4605-417a-83e0-4b0952630054",
+            "containerId": "e41ec7ff-a61d-4bf3-b1dc-43c3c63dce8a",
+            "name": "Update data of Product",
+            "url": "/product/updateProduct/65e09fa912ab95fe193cf8e0",
+            "method": "PUT",
+            "sortNum": 10000,
+            "created": "2024-02-29T15:02:38.649Z",
+            "modified": "2024-03-04T16:45:51.729Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "formencoded",
+                "raw": "",
+                "form": [
+                    {
+                        "name": "name",
+                        "value": "Escoba"
+                    },
+                    {
+                        "name": "description",
+                        "value": "Objeto para barrer"
+                    },
+                    {
+                        "name": "stock",
+                        "value": "41"
+                    },
+                    {
+                        "name": "category",
+                        "value": "a",
+                        "isDisabled": true
+                    }
+                ]
+            },
+            "tests": []
+        },
+        {
+            "_id": "024e58b8-7d1d-4eaa-818f-f22ec9bfe894",
+            "colId": "6246dca3-4605-417a-83e0-4b0952630054",
+            "containerId": "e41ec7ff-a61d-4bf3-b1dc-43c3c63dce8a",
+            "name": "Delete a Product",
+            "url": "/product/deleteProducts/65d7ef551c1a1aff2dc0be25",
+            "method": "DELETE",
+            "sortNum": 20000,
+            "created": "2024-02-29T15:02:38.650Z",
+            "modified": "2024-02-29T15:02:38.650Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "df8c20a5-5eab-4846-96b1-9a3dedc006fa",
+            "colId": "6246dca3-4605-417a-83e0-4b0952630054",
+            "containerId": "6faaac19-36e4-43bb-8f61-4ac7da6c4042",
+            "name": "No Products :C",
+            "url": "/product/getNoProducts",
+            "method": "GET",
+            "sortNum": 40000,
+            "created": "2024-02-29T15:02:38.646Z",
+            "modified": "2024-02-29T15:02:38.646Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "e8bae914-900c-4aa5-aadb-e629d4987477",
+            "colId": "6246dca3-4605-417a-83e0-4b0952630054",
+            "containerId": "6faaac19-36e4-43bb-8f61-4ac7da6c4042",
+            "name": "Product for categories",
+            "url": "/product/viewProductbyCategory/65d6b6d7c396a15df1801e26",
+            "method": "GET",
+            "sortNum": 110000,
+            "created": "2024-02-29T15:02:38.651Z",
+            "modified": "2024-02-29T15:02:38.651Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "e0fb7036-8a06-4282-8f00-b2fbe6c441f0",
+            "colId": "6246dca3-4605-417a-83e0-4b0952630054",
+            "containerId": "16bee4f0-0dcc-4e88-b940-d23d31cfb61e",
+            "name": "Add a Category",
+            "url": "/saveCategory",
+            "method": "POST",
+            "sortNum": 120000,
+            "created": "2024-02-29T15:02:38.652Z",
+            "modified": "2024-02-29T15:02:38.652Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "formencoded",
+                "raw": "",
+                "form": [
+                    {
+                        "name": "name",
+                        "value": "Casa"
+                    },
+                    {
+                        "name": "description",
+                        "value": "cosas de casa"
+                    }
+                ]
+            },
+            "tests": []
+        },
+        {
+            "_id": "00326bdc-0aa4-4d99-a95e-5ec38140d35c",
+            "colId": "6246dca3-4605-417a-83e0-4b0952630054",
+            "containerId": "6faaac19-36e4-43bb-8f61-4ac7da6c4042",
+            "name": "See all Categories",
+            "url": "/getAllCategories",
+            "method": "GET",
+            "sortNum": 130000,
+            "created": "2024-02-29T15:02:38.653Z",
+            "modified": "2024-02-29T15:02:38.653Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "1eeb6064-55ff-4dc3-9e02-36ac10bbccf7",
+            "colId": "6246dca3-4605-417a-83e0-4b0952630054",
+            "containerId": "25beebcb-9bff-40ad-8e3a-bfaced668592",
+            "name": "Delete a category",
+            "url": "/deleteCategory/65d2a046a968f251df1a5171",
+            "method": "DELETE",
+            "sortNum": 150000,
+            "created": "2024-02-29T15:02:38.655Z",
+            "modified": "2024-02-29T15:02:38.655Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "c1b64b79-79e0-4adc-89ce-e0bbfbf0d39b",
+            "colId": "6246dca3-4605-417a-83e0-4b0952630054",
+            "containerId": "25beebcb-9bff-40ad-8e3a-bfaced668592",
+            "name": "Update a Category",
+            "url": "/updateCategory/65d2a046a968f251df1a5171",
+            "method": "PUT",
+            "sortNum": 170000,
+            "created": "2024-02-29T15:02:38.656Z",
+            "modified": "2024-02-29T15:02:38.656Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "formencoded",
+                "raw": "",
+                "form": [
+                    {
+                        "name": "name",
+                        "value": "Deportes"
+                    },
+                    {
+                        "name": "description",
+                        "value": "ssss"
+                    }
+                ]
+            },
+            "tests": []
+        },
+        {
+            "_id": "fb10395c-5059-4ab2-9ce7-2a49aa05ab40",
+            "colId": "6246dca3-4605-417a-83e0-4b0952630054",
+            "containerId": "9ad9f7b5-0fef-46d2-8cb2-3d1ca71bbd88",
+            "name": "Login",
+            "url": "/login",
+            "method": "POST",
+            "sortNum": 180000,
+            "created": "2024-02-29T15:02:38.657Z",
+            "modified": "2024-03-04T17:40:43.208Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "formencoded",
+                "raw": "",
+                "form": [
+                    {
+                        "name": "username",
+                        "value": "parmas"
+                    },
+                    {
+                        "name": "password",
+                        "value": "guatemala"
+                    }
+                ]
+            },
+            "tests": []
+        },
+        {
+            "_id": "a3e7d45d-a463-47a4-8736-484f239b2af6",
+            "colId": "6246dca3-4605-417a-83e0-4b0952630054",
+            "containerId": "9ad9f7b5-0fef-46d2-8cb2-3d1ca71bbd88",
+            "name": "Add a CLIENT",
+            "url": "/registClient",
+            "method": "POST",
+            "sortNum": 190000,
+            "created": "2024-02-29T15:02:38.658Z",
+            "modified": "2024-03-04T17:17:58.365Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "formencoded",
+                "raw": "",
+                "form": [
+                    {
+                        "name": "name",
+                        "value": "Josue"
+                    },
+                    {
+                        "name": "username",
+                        "value": "Grey"
+                    },
+                    {
+                        "name": "password",
+                        "value": "Guatemala"
+                    },
+                    {
+                        "name": "email",
+                        "value": "jgrey@gmail.com"
+                    },
+                    {
+                        "name": "phone",
+                        "value": "77884466"
+                    },
+                    {
+                        "name": "role",
+                        "value": "CLIENT"
+                    }
+                ]
+            },
+            "tests": []
+        },
+        {
+            "_id": "e5fd303e-7b36-40e9-acb5-6f1863ac53c3",
+            "colId": "6246dca3-4605-417a-83e0-4b0952630054",
+            "containerId": "9ad9f7b5-0fef-46d2-8cb2-3d1ca71bbd88",
+            "name": "pURCHASE",
+            "url": "/purchaseAdd",
+            "method": "POST",
+            "sortNum": 200000,
+            "created": "2024-02-29T15:13:42.826Z",
+            "modified": "2024-03-04T14:44:34.415Z",
+            "headers": [
+                {
+                    "name": "token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWU1Y2YwZmViZjIxYmM1ZjUwODE5ZTciLCJ1c2VybmFtZSI6ImdyZXkiLCJuYW1lIjoiSm9zdWUiLCJyb2xlIjoiQ0xJRU5UIiwiaWF0IjoxNzA5NTU5NjU1LCJleHAiOjE3MDk1NzA0NTV9.EUn4X-cWCmdnjzWkI-ktHbjmUXuFmA20Y9stc1wCmYY"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "formencoded",
+                "raw": "",
+                "form": [
+                    {
+                        "name": "date",
+                        "value": "2024/02/24"
+                    },
+                    {
+                        "name": "amount",
+                        "value": "20"
+                    },
+                    {
+                        "name": "status",
+                        "value": "CREATED"
+                    },
+                    {
+                        "name": "product",
+                        "value": "65e09fa912ab95fe193cf8e0"
+                    },
+                    {
+                        "name": "user",
+                        "value": "65e5cf0febf21bc5f50819e7"
+                    }
+                ]
+            },
+            "tests": []
+        },
+        {
+            "_id": "3811ae0d-50e8-47d7-a4ed-79205ab61907",
+            "colId": "6246dca3-4605-417a-83e0-4b0952630054",
+            "containerId": "6faaac19-36e4-43bb-8f61-4ac7da6c4042",
+            "name": "Get carrito de comprasa",
+            "url": "/getPurchases",
+            "method": "GET",
+            "sortNum": 210000,
+            "created": "2024-02-29T15:16:28.689Z",
+            "modified": "2024-02-29T15:18:00.822Z",
+            "headers": [
+                {
+                    "name": "token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWUwOWQxOTE3YWJhYTBiZDkyZWE0ODciLCJ1c2VybmFtZSI6Imp1YW5jaG8iLCJuYW1lIjoiSnVhbmV0byIsInJvbGUiOiJBRE1JTiIsImlhdCI6MTcwOTIxOTU1OSwiZXhwIjoxNzA5MjMwMzU5fQ.IxIL0I-OQ8RhHkdV0ZUj6QjprjLa3eU1Yw-NbcDAlYw"
+                }
+            ],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "6876a217-58a8-4e80-9508-e52db52b2573",
+            "colId": "6246dca3-4605-417a-83e0-4b0952630054",
+            "containerId": "16bee4f0-0dcc-4e88-b940-d23d31cfb61e",
+            "name": "Add a ADMIN",
+            "url": "/register",
+            "method": "POST",
+            "sortNum": 220000,
+            "created": "2024-03-04T17:17:14.511Z",
+            "modified": "2024-03-04T17:43:12.327Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "formencoded",
+                "raw": "",
+                "form": [
+                    {
+                        "name": "name",
+                        "value": "Pedro"
+                    },
+                    {
+                        "name": "username",
+                        "value": "parmas"
+                    },
+                    {
+                        "name": "password",
+                        "value": "guatemala"
+                    },
+                    {
+                        "name": "email",
+                        "value": "pedroarmas@gmail.com"
+                    },
+                    {
+                        "name": "phone",
+                        "value": "55669988"
+                    },
+                    {
+                        "name": "role",
+                        "value": "a",
+                        "isDisabled": true
+                    }
+                ]
+            },
+            "tests": []
+        },
+        {
+            "_id": "97a3f6fc-3635-4e43-a111-0c17750da7b8",
+            "colId": "6246dca3-4605-417a-83e0-4b0952630054",
+            "containerId": "fa88a6a2-f5aa-4fd9-adb4-aa1ace082289",
+            "name": "Update a USER",
+            "url": "/updateUser/65e603061e690e9423e6e699",
+            "method": "PUT",
+            "sortNum": 230000,
+            "created": "2024-03-04T17:35:12.694Z",
+            "modified": "2024-03-04T17:40:54.723Z",
+            "headers": [
+                {
+                    "name": "Authorization",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWU2MDMwNjFlNjkwZTk0MjNlNmU2OTkiLCJ1c2VybmFtZSI6InBhcm1hcyIsIm5hbWUiOiJQZWRybyIsInJvbGUiOiJBRE1JTiIsImlhdCI6MTcwOTU3NDA0MywiZXhwIjoxNzA5NTg0ODQzfQ.-aW8e-ZoIZxyq3KpoGBFfXBG1J0iESof_wpVZvhokt0"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "formencoded",
+                "raw": "",
+                "form": [
+                    {
+                        "name": "name",
+                        "value": "Pedro"
+                    },
+                    {
+                        "name": "username",
+                        "value": "parmas"
+                    },
+                    {
+                        "name": "password",
+                        "value": "",
+                        "isDisabled": true
+                    },
+                    {
+                        "name": "email",
+                        "value": "pedroarmas@gmail.com"
+                    },
+                    {
+                        "name": "phone",
+                        "value": "22556699"
+                    },
+                    {
+                        "name": "role",
+                        "value": "",
+                        "isDisabled": true
+                    }
+                ]
+            },
+            "tests": []
+        }
+    ],
+    "settings": {
+        "options": {
+            "baseUrl": "http://localhost:2656"
+        }
+    }
+}
