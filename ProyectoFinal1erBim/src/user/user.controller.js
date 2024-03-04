@@ -15,6 +15,25 @@ export const register = async(req, res)=>{
         //Encriptar la contraseña
         data.password = await encrypt(data.password)        
         //Guardar la información en la BD
+        data.role = 'ADMIN'
+        let user = new User(data)
+        await user.save() //Guardar en la BD
+        //Responder al usuario
+        return res.send({message: `Registered successfully, can be logged with username ${user.username}`})
+    }catch(err){
+        console.error(err)
+        return res.status(500).send({message: 'Error registering user', err: err})
+    }
+}
+
+export const registClient = async(req, res)=>{
+    try{
+        //Capturar el formulario (body)
+        let data = req.body
+        //Encriptar la contraseña
+        data.password = await encrypt(data.password)        
+        //Guardar la información en la BD
+        data.role = 'CLIENT'
         let user = new User(data)
         await user.save() //Guardar en la BD
         //Responder al usuario
