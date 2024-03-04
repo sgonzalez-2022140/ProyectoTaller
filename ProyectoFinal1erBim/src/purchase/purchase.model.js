@@ -7,9 +7,13 @@ const purchaseSchema = Schema({
         type: Date,
         required: true
     },
+    amount: {
+        type: Number,
+        required: true
+    },
     status: {
         type: String,
-        enum: ['CREATED', 'ACCEPTED', 'CANCELLED', 'COMPLETED'],
+        enum: ['CREATED', 'CANCELLED', 'COMPLETED'],
         default: 'CREATED',
         required: true
     },
