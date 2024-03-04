@@ -16,15 +16,20 @@ export const purchaseAdd = async(req, res)=>{
         console.log("User ID:", typeof(data.user));
         //tengo un error aqui ya que se pone como String
         let product = await Product.findOne({ _id: data.product });
-        
+        //Crear variable de stock 
+        let stock = product.stock;
+
+
         if(!product) return res.status(404).send({message: 'Product not found'})
-        //Validar que tengamos productos en stock
-        
-        if (product.stock === 0) return res.status(404).send({ message: 'We dont have this product right now' });
-
-
+        //Validar que tengamos productos en stock               
+        if (stock === 0) return res.status(404).send({ message: 'We dont have this product right now' });               
         //Guardar
         let purchase = new Purchase(data)
+        let amount = purchase.amount;
+        let stockAfter = stock-amount;
+        //validacion para restar productos que se quieran comprar
+        if(stock < amount) return res.send({ message: 'No existe la cantidad requerida'})
+        //guardar
         await purchase.save()
         return res.send({message: `Purchase successfully, for the date ${purchase.date}`})
     }catch (err) {
@@ -44,3 +49,4 @@ export const getPurchases = async(req, res)=>{
         return res.status(500).send({message: 'No Purchases or error Getting purchases'})
     }
 }
+
