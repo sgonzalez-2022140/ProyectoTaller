@@ -3,6 +3,7 @@
 //importamos express y sus confs
 import express from 'express'
 import { config } from "dotenv"
+import easyinvoice from 'easyinvoice'
 import cors from 'cors'
 
 //exportamos métodos
@@ -32,3 +33,4 @@ export const initServer = ()=>{
     app.listen(port)
     console.log(`Server HTTP running in port ${port}`)
 }
+

@@ -36,6 +36,8 @@ export const getAllCategories = async(req, res) =>{
     }
 }
 
+
+
 export const deleteCategory = async(req, res)=>{
     try{
         //le diremos que eliminemos por id

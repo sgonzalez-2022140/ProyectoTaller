@@ -5,11 +5,13 @@ import {
     isClient
 } from '../middlewares/validate-jwt.js'
 
+
 import {
     register,
     login,
     deleteUser,
-    updateUser
+    updateUser, 
+    registClient
 } from './user.controller.js'
 
 const api = express.Router()
@@ -17,6 +19,7 @@ const api = express.Router()
 //rutas publicas
 api.post('/register', register)
 api.post('/login', login)
+api.post('/registClient', registClient)
 
 //Rutas privadas
 api.get('/test', [validateJwt, isAdmin])

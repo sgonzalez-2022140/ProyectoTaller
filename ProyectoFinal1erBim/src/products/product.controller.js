@@ -70,6 +70,16 @@ export const search = async(req, res)=>{
     }
 }
 
+export const getInventary = async(req, res)=>{        
+    try{
+        let products = await Product.find().populate('categories'); 
+        return res.send({ products })
+    }catch(err){
+        console.error(err)
+        return res.status(500).send({ message: 'Error getting Products' })
+    }
+}
+
 
 // Productos individuales por ID
 export const getAProduct = async(req, res) => {
